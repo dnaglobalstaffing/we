@@ -1242,6 +1242,25 @@ button:hover,
   color: #9ca3af;
 }
 
+/* ===== FOOTER FIX ===== */
+
+.footer {
+  position: relative;
+  z-index: 5;
+}
+
+.footer-contact a {
+  color: #ffffff;      /* footer text color ke according */
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.footer-contact a:hover {
+  color: #2bb0ed;
+}
+
+
 /* WhatsApp Button */
 .whatsapp-float {
   position: fixed;
@@ -1327,3 +1346,103 @@ header {
   background: #ccc;
   border-radius: 10px;
 }
+
+/* Disable body scroll when menu open */
+.menu-open {
+  overflow: hidden;
+}
+
+/* Make mobile menu scrollable */
+.mobile-menu {
+  overflow-y: auto;
+}
+
+/* CLEAN MOBILE HEADER */
+
+.mobile-header {
+  padding: 10px 18px;
+  background: #ffffff;
+}
+
+/* Remove blue underline everywhere */
+a {
+  text-decoration: none;
+}
+
+/* Mobile nav links style */
+#mobileNavLinks a {
+  color: #333;
+}
+
+/* Hamburger fix */
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 2000;
+}
+
+/* Hover open */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Click open */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* ==========================
+   FIXED HEADER
+========================== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  background: #ffffff;
+}
+
+/* Give space to body so content not hide under header */
+
+body {
+  padding-top: 90px;  /* adjust if header height changes */
+}
+
+header {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.mobile-contact-links {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-contact-links a {
+  color: #0077ff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
