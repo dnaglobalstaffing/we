@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Care Assistant | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER LOAD ================= -->
+<div id="header"></div>
+
+<script>
+fetch('../../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../../assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="service-hero">
+  <h1>Health Care Assistant</h1>
+  <p>Professional healthcare assistants providing compassionate patient support</p>
+</section>
+
+<!-- ================= SERVICE DETAILS ================= -->
+<section class="service-detail">
+
+  <div class="service-box">
+    <h2>About the Role</h2>
+    <p>
+      Our Health Care Assistants (HCAs) support patients with daily healthcare
+      needs in homes, hospitals, and care facilities. They work alongside nurses
+      and medical staff to ensure comfort, hygiene, and safety.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h2>Key Responsibilities</h2>
+    <ul>
+      <li>Assisting patients with personal care and mobility</li>
+      <li>Monitoring basic health conditions</li>
+      <li>Helping with feeding and medication reminders</li>
+      <li>Maintaining hygiene and cleanliness</li>
+      <li>Providing emotional and physical support</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h2>Why Choose DNA Global Staffing?</h2>
+    <ul>
+      <li>Certified & trained professionals</li>
+      <li>Verified background and experience</li>
+      <li>Flexible shift availability</li>
+      <li>Quick placement & reliable support</li>
+    </ul>
+  </div>
+
+  <div class="service-cta">
+    <a href="../contact.html" class="btn-primary">
+      Request a Health Care Assistant
+    </a>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER LOAD ================= -->
+<div id="footer"></div>
+
+<script>
+fetch('../../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

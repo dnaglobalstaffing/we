@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER LOAD ================= -->
+<div id="header"></div>
+
+<script>
+fetch('../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+  <h1>Contact Us</h1>
+  <p>Professional Healthcare & Staffing Support</p>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-wrapper">
+
+  <!-- LEFT SIDE -->
+  <div class="contact-info">
+
+    <h2>Get in Touch</h2>
+
+    <div class="info-card">
+      <p><strong>📞 Phone</strong><br>
+      <a href="tel:+447438821200">+44 7438 821200</a></p>
+
+      <p><strong>📧 Email</strong><br>
+      <a href="mailto:dnaglobalstaffing@googlegroups.com">
+      dnaglobalstaffing@googlegroups.com</a></p>
+
+      <p><strong>📍 Location</strong><br>
+      London, United Kingdom</p>
+    </div>
+
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps?q=London,United+Kingdom&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE -->
+  <div class="contact-form-box">
+
+    <h2>Request a Service</h2>
+
+   
+    <form action="/api/contact" method="POST">
+
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Full Name" 
+        required>
+
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Email Address (Optional)">
+
+      <input 
+        type="tel" 
+        name="phone" 
+        placeholder="Phone Number (e.g. +447438821200)" 
+        required>
+
+      <select name="service" required>
+        <option value="">Select Required Service</option>
+        <option value="Healthcare Staffing">Healthcare Staffing</option>
+        <option value="Nursing Support">Nursing Support</option>
+        <option value="Care Home Staff">Care Home Staff</option>
+        <option value="Temporary Staff">Temporary Staff</option>
+      </select>
+
+      <input 
+        type="text" 
+        name="location" 
+        placeholder="City / Location" 
+        required>
+
+      <textarea 
+        name="message" 
+        rows="4" 
+        placeholder="Additional Details (Optional)">
+      </textarea>
+
+      <button type="submit">Submit Request</button>
+
+    </form>
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER LOAD ================= -->
+<div id="footer"></div>
+
+<script>
+fetch('../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

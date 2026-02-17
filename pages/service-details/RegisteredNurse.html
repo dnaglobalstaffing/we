@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registered Nurse | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER LOAD ================= -->
+<div id="header"></div>
+
+<script>
+fetch('../../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../../assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+<!-- ================= HERO ================= -->
+<section class="service-hero">
+  <h1>Registered Nurse</h1>
+  <p>Qualified nurses delivering professional medical care with compassion</p>
+</section>
+
+<!-- ================= SERVICE DETAILS ================= -->
+<section class="service-detail">
+
+  <div class="service-box">
+    <h2>About the Service</h2>
+    <p>
+      Our Registered Nurses provide expert medical and clinical care in
+      home, hospital, and care facility settings. They work independently
+      and in coordination with doctors to ensure high-quality patient care.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h2>Clinical Responsibilities</h2>
+    <ul>
+      <li>Patient health assessment and monitoring</li>
+      <li>Administering medications and injections</li>
+      <li>Wound care and dressing management</li>
+      <li>Post-operative and chronic care support</li>
+      <li>Maintaining accurate medical records</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h2>Why Choose DNA Global Staffing?</h2>
+    <ul>
+      <li>Licensed and professionally certified nurses</li>
+      <li>Experienced in acute and long-term care</li>
+      <li>Compliance with healthcare regulations</li>
+      <li>Trusted support for patients and families</li>
+    </ul>
+  </div>
+
+  <div class="service-cta">
+    <a href="../contact.html" class="btn-primary">
+      Request a Registered Nurse
+    </a>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER LOAD ================= -->
+<div id="footer"></div>
+
+<script>
+fetch('../../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

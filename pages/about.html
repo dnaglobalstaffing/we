@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Correct CSS Path -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- HEADER LOAD -->
+<div id="header"></div>
+
+<script>
+fetch('../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <h1>About Us</h1>
+  <p>Building trust by connecting homes with reliable professionals.</p>
+</section>
+
+
+<!-- ABOUT CONTENT -->
+<section class="about-section">
+  <div class="about-container">
+
+    <p class="about-intro">
+      DNA Global Staffing is a professional home staffing and support services company
+      committed to providing trusted and verified personnel for household and care needs.
+    </p>
+
+    <p>
+      We believe that every home deserves dependable support. From daily household assistance
+      to specialized patient and elder care, our goal is to simplify life by offering skilled
+      professionals who genuinely care about the people they serve.
+    </p>
+
+    <p>
+      Our recruitment process focuses on background verification, experience assessment, and
+      personal screening. This ensures that each individual we place meets our standards
+      of responsibility, integrity, and professionalism.
+    </p>
+
+    <p>
+      With a customer-first approach, DNA Global Staffing works closely with clients to understand
+      their requirements and deliver timely, suitable staffing solutions. We continuously
+      strive to improve service quality and build long-term relationships based on trust.
+    </p>
+
+    <p class="about-highlight">
+      <strong>Our Mission:</strong><br>
+      To provide reliable, trained, and compassionate professionals that help families
+      feel secure, supported, and confident.
+    </p>
+
+    <p class="about-highlight">
+      <strong>Our Vision:</strong><br>
+      To become a trusted name in home staffing services by consistently delivering quality,
+      transparency, and care.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/447438821200"
+  class="whatsapp-float"
+  target="_blank"
+>
+  WhatsApp
+</a>
+
+
+
+</body>
+</html>

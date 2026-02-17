@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER LOAD ================= -->
+<div id="header"></div>
+
+<script>
+fetch('../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../assets/js/loadComponents.js";
+    script.defer = true;   // ✅ ADD THIS LINE
+    document.body.appendChild(script);
+  });
+</script>
+
+
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+  <h1>Our Services</h1>
+  <p>Reliable, trained and verified professionals for your home needs.</p>
+</section>
+
+
+<!-- ================= SERVICES SECTION ================= -->
+<section class="services-page">
+  <div class="services-wrapper">
+
+    <div class="service-item">
+      <h3>Home Healthcare</h3>
+      <p>
+        Trusted home healthcare services providing professional patient care,
+        medical assistance, and recovery support by trained healthcare staff.
+      </p>
+    </div>
+
+    <div class="service-item">
+      <h3>Patient Care</h3>
+      <p>
+        Skilled caregivers offering hospital and home-based patient care,
+        including daily assistance and medical support.
+      </p>
+    </div>
+
+    <div class="service-item">
+      <h3>Elder Care</h3>
+      <p>
+        Compassionate elder care services focused on senior health monitoring,
+        medication support, and daily assistance.
+      </p>
+    </div>
+
+    <div class="service-item">
+      <h3>Child & Pediatric Care</h3>
+      <p>
+        Professional child healthcare support including basic medical care,
+        supervision, and attentive assistance by trained caregivers.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CTA SECTION ================= -->
+<section class="cta">
+  <h2>Looking for trusted home staff?</h2>
+  <a href="contact.html" class="btn-secondary">Request a Service</a>
+</section>
+
+
+<!-- ================= FOOTER LOAD ================= -->
+<div id="footer"></div>
+
+<script>
+fetch('../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

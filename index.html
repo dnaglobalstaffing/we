@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- HEADER COMPONENT -->
+<div id="header"></div>
+
+<script>
+fetch('components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    // Load navigation / hamburger script AFTER header loads
+    const script = document.createElement("script");
+    script.src = "assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+<!-- HERO SLIDER -->
+<section class="hero-slider">
+
+  <div class="slides">
+    <div class="slide active">
+      <img src="assets/images/home.jpg" alt="Home Staffing">
+    </div>
+
+    <div class="slide">
+      <img src="assets/images/home.jpg" alt="Patient Care">
+    </div>
+
+    <div class="slide">
+      <img src="assets/images/home.jpg" alt="Elder Care">
+    </div>
+  </div>
+
+  <!-- OVERLAY CONTENT -->
+  <div class="hero-overlay">
+    <h1>Trusted Home Staffing Services</h1>
+    <p>Professional & verified staff for home and care services</p>
+    <a href="contact.html" class="btn-primary">Request a Service</a>
+  </div>
+
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+  <h2>Our Services</h2>
+  <p class="subtext">We provide reliable and trained professionals for your needs.</p>
+
+  <div class="service-grid">
+    <div class="service-card">Home Services</div>
+    <div class="service-card">Patient Care</div>
+    <div class="service-card">Elder Care</div>
+    <div class="service-card">Babysitter</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Need trusted staff at your home?</h2>
+  <a href="contact.html" class="btn-secondary">Contact Us</a>
+</section>
+
+<!-- HOMEPAGE CONTACT -->
+<section class="home-contact">
+  <div class="home-contact-container">
+
+    <div class="home-contact-info">
+      <h2>Contact Us</h2>
+
+      <p><strong>📞 Phone:</strong><br> +44 7438 821200</p>
+      <p><strong>📧 Email:</strong><br> dnaglobalstaffing@gmail.com</p>
+      <p><strong>📍 Location:</strong><br> London</p>
+
+      <a href="contact.html" class="btn-primary">Request a Service</a>
+    </div>
+
+    <div class="home-contact-map">
+      <iframe
+        src="https://www.google.com/maps?q=London%2C%20United%20Kingdom&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a 
+  href="https://wa.me/447438821200"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp">
+  <span>WhatsApp</span>
+</a>
+
+<!-- FOOTER COMPONENT -->
+<div id="footer"></div>
+
+<script>
+fetch('components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+<!-- OPTIONAL: HERO SLIDER JS -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

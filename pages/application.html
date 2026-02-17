@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNA Staffing Solution - Application Form</title>
+
+<!-- APPLICATION PAGE CSS -->
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<div id="header"></div>
+
+<script>
+fetch('../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+
+<!-- ================= APPLICATION CONTAINER ================= -->
+
+<div class="container">
+
+<h1>Application Form - Inquiry</h1>
+
+<div class="step-wrapper">
+<div class="step-circle">1</div>
+<div class="step-line"></div>
+<div class="step-circle">2</div>
+</div>
+
+<div class="tab-label">Inquiry Form</div>
+
+<form id="applicationForm">
+
+<!-- ===================== STEP 1 START ===================== -->
+
+<div id="step1">
+
+<!-- ================= PERSONAL INFORMATION ================= -->
+
+<h2 class="section-title">Part 1: Personal Information Details</h2>
+
+<label>Position Applied For <span class="required">*</span></label>
+<select name="position" required>
+<option value="">Select Position</option>
+<option>Bar Staff / Bartender</option>
+<option>Barista</option>
+<option>Cabin Crew / Flight Attendant</option>
+<option>Care Home Chef/Cook</option>
+<option>Cashier</option>
+<option>Catering Assistant</option>
+<option>Chef de Partie</option>
+<option>Clinical Support Worker</option>
+<option>Commis Chef</option>
+<option>Concierge</option>
+<option>Conference & Events Assistant</option>
+<option>Customer Service Assistant</option>
+<option>Deputy Manager (Care Home)</option>
+<option>Distribution Centre Manager</option>
+<option>F&B Supervisor</option>
+<option>Finance/Accounts Assistant</option>
+<option>Forklift Truck (FLT) Driver</option>
+<option>General Manager</option>
+<option>Head Chef / Executive Chef</option>
+<option>Healthcare Assistant (HCA)</option>
+<option>Hotel Chef</option>
+<option>Hotel Manager</option>
+<option>Hotel Receptionist</option>
+<option>Housekeeping / Domestic Assistant</option>
+<option>Laundry Assistant</option>
+<option>Machine Operator</option>
+<option>Marketing Executive</option>
+<option>Mental Health Support Worker</option>
+<option>Night Healthcare Assistant</option>
+<option>Night Porter</option>
+<option>Occupational Therapist</option>
+<option>Operations Manager</option>
+<option>Physiotherapist</option>
+<option>Physiotherapy Assistant</option>
+<option>Picker / Packer</option>
+<option>Public Health Worker</option>
+<option>Receptionist / Front Desk Agent</option>
+<option>Registered Care Manager</option>
+<option>Registered Nurse (RGN)</option>
+<option>Reservations Agent</option>
+<option>Restaurant Manager</option>
+<option>Restaurant Server</option>
+<option>Room Attendant</option>
+<option>Sales Assistant</option>
+<option>Security / Event Security</option>
+<option>Senior Cabin Crew / Purser</option>
+<option>Senior Care Assistant</option>
+<option>Shift Leader</option>
+<option>Social Worker</option>
+<option>Sommelier (Wine Specialist)</option>
+<option>Support Worker</option>
+<option>Training Coordinator</option>
+<option>Transport Assistant</option>
+<option>Warehouse Assistant</option>
+<option>Warehouse Manager</option>
+<option>Warehouse Operative</option>
+<option>Warehouse Supervisor</option>
+<option>Other</option>
+</select>
+
+<br><br>
+
+<label>Title <span class="required">*</span></label>
+<input type="text" name="title" required>
+
+<label>First Name <span class="required">*</span></label>
+<input type="text" name="firstName" required>
+
+<label>Last Name <span class="required">*</span></label>
+<input type="text" name="lastName" required>
+
+<label>Date of Birth <span class="required">*</span></label>
+<input type="date" name="dob" required>
+
+<label>Phone <span class="required">*</span></label>
+<input type="tel" name="phone" required>
+
+<label>Email <span class="required">*</span></label>
+<input type="email" name="email" required>
+
+<label>Street Address <span class="required">*</span></label>
+<input type="text" name="streetAddress" required>
+
+<label>City <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Postal / Zip Code <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Country <span class="required">*</span></label>
+<select name="country" required>
+<option>United Kingdom</option>
+<option>India</option>
+<option>United States</option>
+<option>Canada</option>
+<option>Australia</option>
+<option>Germany</option>
+<option>France</option>
+<option>Italy</option>
+<option>Spain</option>
+<option>Netherlands</option>
+<option>Sweden</option>
+<option>Norway</option>
+<option>Denmark</option>
+<option>Finland</option>
+<option>Ireland</option>
+<option>Poland</option>
+<option>Romania</option>
+<option>Portugal</option>
+<option>Belgium</option>
+<option>Austria</option>
+<option>Switzerland</option>
+<option>New Zealand</option>
+<option>UAE</option>
+<option>Saudi Arabia</option>
+<option>Qatar</option>
+<option>Singapore</option>
+<option>Malaysia</option>
+<option>Nepal</option>
+<option>Bangladesh</option>
+<option>Pakistan</option>
+<option>Sri Lanka</option>
+<option>South Africa</option>
+<option>Nigeria</option>
+<option>Kenya</option>
+<option>Ghana</option>
+<option>Philippines</option>
+<option>Japan</option>
+<option>China</option>
+<option>South Korea</option>
+<option>Brazil</option>
+<option>Mexico</option>
+<option>Turkey</option>
+<option>Egypt</option>
+<option>All Other Countries</option>
+</select>
+
+<br><br>
+
+<label>Do you have a UK Full Driving License? <span class="required">*</span></label>
+<select required>
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<label>NI Number</label>
+<input type="text" placeholder="2 letters, 6 numbers, 1 letter">
+
+<label>Visa Type <span class="required">*</span></label>
+<input type="text" name="visaType" required>
+
+<label>Right to Work Sharecode</label>
+<input type="text">
+
+<label>Passport Number <span class="required">*</span></label>
+<input type="text" name="passportNumber" required>
+
+<label>Passport Expiry Date <span class="required">*</span></label>
+<input type="date" name="passportExpiry" required>
+
+<label>NMC UK PIN</label>
+<input type="text">
+
+<label>NMC Pin Expiry Date</label>
+<input type="date">
+
+
+<!-- ================= RCNi SECTION ================= -->
+
+<label>Do you hold a RCNi Membership?</label>
+<div class="radio-group">
+<input type="radio" name="rcni" value="Yes" onclick="showRCNi('Yes')">
+<input type="radio" name="rcni" value="No" onclick="showRCNi('No')">
+</div>
+
+<div id="rcniField" style="display:none;">
+<label>Please share your RCNi Membership Number</label>
+<input type="text" name="rcniMembershipNumber">
+<p class="note">Can be sourced from your RCNi Membership Confirmation Letter</p>
+</div>
+
+<!-- ================= NEXT OF KIN ================= -->
+
+<h2 class="section-title">Next of Kin Details</h2>
+
+<label>Title <span class="required">*</span></label>
+<input type="text" required>
+
+<label>First Name <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Last Name <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Phone <span class="required">*</span></label>
+<input type="tel" required>
+
+<label>Email <span class="required">*</span></label>
+<input type="email" required>
+
+<label>Street Address <span class="required">*</span></label>
+<input type="text" required>
+
+<label>City <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Postal / Zip Code <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Relationship <span class="required">*</span></label>
+<input type="text" required>
+
+<!-- ================= NATIONALITY / ETHNIC / GENDER ================= -->
+
+<h2 class="section-title">Additional Information</h2>
+
+<label>Nationality <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Ethnic Origin <span class="required">*</span></label>
+<input type="text" required>
+
+<label>Gender <span class="required">*</span></label>
+<select required>
+<option value="">Select</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+<option>Prefer not to say</option>
+</select>
+
+<!-- ================= ACADEMIC QUALIFICATIONS ================= -->
+
+<h2 class="section-title">Part 3: Academic Qualifications <span class="required">*</span></h2>
+
+<div class="table-wrapper">
+<div class="grid-table">
+
+<div></div>
+<div><b>Name of Institution / School / University <span class="required">*</span></b></div>
+<div><b>Course / Qualifications <span class="required">*</span></b></div>
+<div><b>Start Date <span class="required">*</span></b></div>
+<div><b>End Date <span class="required">*</span></b></div>
+<div><b>Student ID Number</b></div>
+
+<div>1 <span class="required">*</span></div>
+
+<input name="education1_institution" required>
+<input name="education1_course" required>
+<input type="date" name="education1_start" required>
+<input type="date" name="education1_end" required>
+<input name="education1_studentId">
+
+<div>2</div>
+
+<input name="education2_institution">
+<input name="education2_course">
+<input type="date" name="education2_start">
+<input type="date" name="education2_end">
+<input name="education2_studentId">
+
+
+<div>3</div>
+
+<input name="education2_institution">
+<input name="education2_course">
+<input type="date" name="education2_start">
+<input type="date" name="education2_end">
+<input name="education2_studentId">
+
+
+</div>
+    </div>
+    
+
+<p class="note">Kindly provide details of your vocational / academic qualifications from the most recent.</p>
+
+<!-- ================= EMPLOYMENT HISTORY ================= -->
+
+<h2 class="section-title">Part 4: Employment History <span class="required">*</span></h2>
+
+<div class="table-wrapper">
+<div class="grid-table">
+
+
+<div></div>
+<div><b>Employer / Name of Company and Address <span class="required">*</span></b></div>
+<div><b>Job Title and Role <span class="required">*</span></b></div>
+<div><b>Start Date <span class="required">*</span></b></div>
+<div><b>End Date <span class="required">*</span></b></div>
+<div><b>Employee ID Number</b></div>
+
+<div>1 <span class="required">*</span></div>
+<input required>
+<input required>
+<input type="date" required>
+<input type="date" required>
+<input>
+
+<div>2</div>
+<input>
+<input>
+<input type="date">
+<input type="date">
+<input>
+
+<div>3</div>
+<input>
+<input>
+<input type="date">
+<input type="date">
+<input>
+
+</div>
+    </div>
+
+<p class="note">Please write your current and previous employment history (most recent first)</p>
+
+<button type="button" onclick="nextStep()">Next</button>
+
+</div>
+
+<!-- ================= STEP 2 – CONSENT FORM ================= -->
+
+<div id="step2" style="display:none;">
+
+<h1 class="main-title">Application Form - Inquiry</h1>
+<h2 class="section-title">Consent Form</h2>
+
+<p class="required">Data Consent / GDPR *Required</p>
+
+<div class="consent-box">
+
+<p>I hereby give my consent to <b>DNA Staffing Solution</b> to process my following information.</p>
+
+<h3>Personal Data:</h3>
+<ul>
+<li>Name</li>
+<li>Date of birth</li>
+<li>Contact details, including telephone number, email address and postal address</li>
+<li>Experience, training and qualifications</li>
+<li>CV</li>
+<li>National insurance number</li>
+<li>Any other relevant personal data required for the job application (e.g. Copy of Passport, Right to work share code, bank statement or utility bills showing address and reference)</li>
+</ul>
+
+<h3>Special Categories of Personal Data</h3>
+<ul>
+<li>Disability/health condition relevant to the role</li>
+<li>Criminal conviction</li>
+<li>Any other relevant personal data required for the job application (e.g. racial or ethnic origin, religion, sexual orientation and marital status)</li>
+</ul>
+
+<h3>Processing Purposes:</h3>
+<ul>
+<li>For the Company to provide me with work-finding services.</li>
+<li>To process or transfer my personal data to clients for work-finding services.</li>
+<li>To store my data on a computerised database system.</li>
+<li>DBS Check and Application</li>
+<li>Reference Requests (Professional & Character)</li>
+<li>Training Provider / Company</li>
+<li>Staff Profiles (with photo ID) to send to care homes / nursing homes / clients</li>
+<li>Supplier’s Portal (e.g. E-tips, Matrix, Neuven, Florence, Fremantle, MORS, MQRS, Appetilla, Comensura)</li>
+<li>Payroll systems related to clients I may be assigned to work with</li>
+</ul>
+
+<p>I also consent DNA Staffing Solution to process my personal data with third parties including (REC, HMRC, ICO, GRI, Consensus, Cohesion, Omni, etc.) for audits and investigations to ensure compliance with legal obligations.</p>
+
+<p>This consent remains valid for <b>60 months</b> from the date of signing.</p>
+
+<p>I understand that I have the right to withdraw my consent at any time by informing the Company in writing.</p>
+
+</div>
+
+<!-- ================= REQUIRED DOCUMENT NOTICE ================= -->
+
+<div class="notice-box">
+<p><b>If you are filing this form outside of DNA Office, the following documents are mandatory to send via email:</b></p>
+<ul>
+<li>Clear copy of valid passport</li>
+<li>RTW Sharecode</li>
+<li>Updated CV</li>
+<li>Photo</li>
+<li>Proof of Address</li>
+</ul>
+</div>
+
+<!-- ================= ACCEPT TERMS ================= -->
+
+<label>
+<input type="checkbox" name="gdprConsent" required> I accept the Terms and Conditions.
+</label>
+
+<br><br>
+
+<h3>Signature *</h3>
+<input type="text" placeholder="Type Full Name as Signature" required>
+
+<br><br>
+
+<label>Date *</label>
+<input type="date" required>
+
+<hr>
+
+<!-- ================= INTERNAL FILE AUDIT CONSENT ================= -->
+
+<h2 class="section-title">Consent for Internal File Audit and Third-Party Audit *</h2>
+
+<div class="consent-box">
+
+<p>I consent to the Company processing my personal data for:</p>
+
+<ul>
+<li>Processing or transferring my personal data to clients for placement</li>
+<li>Storing and managing my data on a computerized database</li>
+<li>DBS Application</li>
+<li>Reference verification</li>
+<li>Training provider correspondence</li>
+<li>Staff profile creation (with photo ID)</li>
+<li>Suppliers' portals (e.g., e-tips, MQRS, Appetilla, Matrix, Comensura)</li>
+<li>Payroll systems related to client placements</li>
+</ul>
+
+<p>I also consent to sharing my data with approved third parties (HMRC, ICO, REC, GRI, Cohesion, Omni, etc.) for audit and legal compliance purposes.</p>
+
+<h4>Additional Consent for File Audits with Third-Party Auditors:</h4>
+
+<p>I provide explicit consent for my files to be audited by approved third-party auditors, including Home Office and DBS, to validate my placement information.</p>
+
+<p>This consent remains valid for 60 months from signing.</p>
+
+<p>I acknowledge my right to withdraw consent at any time in writing.</p>
+
+</div>
+
+<label>
+<input type="checkbox" name="auditConsent" required> I accept the Terms and Conditions.
+</label>
+
+<br><br>
+
+<label>Name *</label>
+<div style="display:flex; gap:10px;">
+<input type="text" placeholder="First Name" required>
+<input type="text" placeholder="Last Name" required>
+</div>
+
+<br>
+
+<label>Signature *</label>
+<input type="text" placeholder="Type Full Name as Signature" required>
+
+<br><br>
+
+<label>Date *</label>
+<input type="date" required>
+
+<br><br>
+
+<div class="button-group">
+    <button type="button" onclick="previousStep()">Back</button>
+    <button type="button" onclick="reviewForm()">Review</button>
+</div>
+
+
+</div>
+<!-- ================= STEP 3 – REVIEW PAGE ================= -->
+
+<div id="step3" style="display:none;">
+
+<h1>Application Review</h1>
+<p>Please review your details before final submission.</p>
+
+<div class="review-box" id="reviewContent">
+<!-- Data will auto appear here -->
+</div>
+
+<br>
+
+<button type="button" onclick="goBackToConsent()">Back</button>
+<button type="button" onclick="submitApplication()">Final Submit</button>
+
+</div>
+
+</form>
+
+</div>
+<!-- END CONTAINER -->
+<!-- ================= FOOTER ================= -->
+<div id="footer"></div>
+
+<script>
+fetch('../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+
+<!-- ================= FORM SCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+window.nextStep = function(){
+
+    const requiredFields = document.querySelectorAll("#step1 [required]");
+
+    for(let field of requiredFields){
+        if(!field.value.trim()){
+            alert("Please fill all required fields before proceeding.");
+            field.focus();
+            return;
+        }
+    }
+
+    document.getElementById("step1").style.display = "none";
+    document.getElementById("step2").style.display = "block";
+    window.scrollTo(0,0);
+};
+
+window.previousStep = function(){
+    document.getElementById("step2").style.display = "none";
+    document.getElementById("step1").style.display = "block";
+    window.scrollTo(0,0);
+};
+
+window.goBackToConsent = function(){
+    document.getElementById("step3").style.display = "none";
+    document.getElementById("step2").style.display = "block";
+    window.scrollTo(0,0);
+};
+
+window.showRCNi = function(value){
+    if(value === "Yes"){
+        document.getElementById("rcniField").style.display="block";
+    } else {
+        document.getElementById("rcniField").style.display="none";
+    }
+};
+
+window.reviewForm = function(){
+
+    const requiredFields = document.querySelectorAll("#step2 [required]");
+
+    for(let field of requiredFields){
+        if(!field.value.trim()){
+            alert("Please accept terms and complete required fields.");
+            field.focus();
+            return;
+        }
+    }
+
+    const form = document.getElementById("applicationForm");
+    const formData = new FormData(form);
+
+    let reviewHTML = `
+        <h3>Application Summary</h3>
+        <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    `;
+
+    for (let [key, value] of formData.entries()) {
+
+        if(value && value.trim() !== ""){
+            reviewHTML += `
+                <tr>
+                    <td style="font-weight:bold; background:#f5f5f5;">${key}</td>
+                    <td>${value}</td>
+                </tr>
+            `;
+        }
+    }
+
+    reviewHTML += "</table>";
+
+    document.getElementById("reviewContent").innerHTML = reviewHTML;
+    document.getElementById("step2").style.display = "none";
+    document.getElementById("step3").style.display = "block";
+    window.scrollTo(0,0);
+};
+
+window.submitApplication = async function(){
+
+    const form = document.getElementById("applicationForm");
+    const formData = new FormData(form);
+    const data = {};
+
+    formData.forEach((value, key) => {
+        if(value && value.trim() !== ""){
+            data[key] = value;
+        }
+    });
+
+    try {
+
+        const response = await fetch('/api/application', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert("Application Submitted Successfully!");
+            window.location.reload();
+        } else {
+            alert("Submission failed!");
+        }
+
+    } catch (error) {
+        alert("Server Error!");
+    }
+};
+
+});
+
+</script>
+
+</body>
+</html>

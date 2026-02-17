@@ -1,0 +1,25 @@
+{
+  "company": "DNA Global Staffing",
+  "logo": "assets/images/DnaLogo.jpeg",
+  "email": "info@dnaglobalstaffing.com",
+  "phone": "+61 412 345 678",
+  "links": [
+    { "name": "Home", "url": "index.html" },
+    { "name": "About", "url": "pages/about.html" },
+    { "name": "Apply Job", "url": "pages/application.html" },
+
+    {
+      "name": "Services",
+      "url": "pages/services.html",
+      "dropdown": [
+        { "name": "Health Care Assistant", "url": "pages/service-details/HealthCareAssistant.html" },
+        { "name": "Senior Carer Assistant", "url": "pages/service-details/SeniorCarerAssistant.html" },
+        { "name": "Kitchen Assistant", "url": "pages/service-details/KitchenAssistant.html" },
+        { "name": "Domestic Assistant", "url": "pages/service-details/DomesticAssistant.html" },
+        { "name": "Registered Nurse", "url": "pages/service-details/RegisteredNurse.html" }
+      ]
+    },
+
+    { "name": "Contact", "url": "pages/contact.html" }
+  ]
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Domestic Assistant | DNA Global Staffing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER LOAD ================= -->
+<div id="header"></div>
+
+<script>
+fetch('../../components/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
+
+    const script = document.createElement("script");
+    script.src = "../../assets/js/loadComponents.js";
+    document.body.appendChild(script);
+  });
+</script>
+
+
+<!-- ================= HERO ================= -->
+<section class="service-hero">
+  <h1>Domestic Assistant</h1>
+  <p>Reliable household support professionals for daily living assistance</p>
+</section>
+
+
+<!-- ================= CONTENT ================= -->
+<section class="service-detail">
+
+  <div class="service-box">
+    <h2>Service Overview</h2>
+    <p>
+      Our Domestic Assistants provide essential household support
+      ensuring comfort, hygiene, and smooth daily routines.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h2>Responsibilities Include</h2>
+    <ul>
+      <li>Daily cleaning & maintenance</li>
+      <li>Cooking & kitchen support</li>
+      <li>Laundry & ironing</li>
+      <li>Elderly care assistance</li>
+      <li>Maintaining organized living spaces</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h2>Why Choose DNA Global Staffing?</h2>
+    <ul>
+      <li>Verified & trained professionals</li>
+      <li>Flexible contracts</li>
+      <li>Affordable pricing</li>
+      <li>Quick placement & replacement</li>
+    </ul>
+  </div>
+
+  <div class="service-cta">
+    <a href="../contact.html" class="btn-primary">
+      Request This Service
+    </a>
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER LOAD ================= -->
+<div id="footer"></div>
+
+<script>
+fetch('../../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+</body>
+</html>
