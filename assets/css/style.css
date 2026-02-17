@@ -1,18 +1,34 @@
+/* =====================================
+   GLOBAL RESET
+===================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* ===== DESKTOP HEADER ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* =====================================
+   DESKTOP HEADER
+===================================== */
+
 .desktop-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 1000;
 }
 
 .logo-area {
@@ -40,23 +56,34 @@
   gap: 25px;
 }
 
+.nav-links li {
+  position: relative;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
   color: #0077b6;
 }
 
-/* ===== MOBILE HEADER ===== */
+
+/* =====================================
+   MOBILE HEADER
+===================================== */
+
 .mobile-header {
   display: none;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: white;
+  background: #ffffff;
+  position: relative;
+  z-index: 1100;
 }
 
 .mobile-top-left {
@@ -74,17 +101,22 @@
   cursor: pointer;
 }
 
-/* ===== MOBILE SLIDE MENU ===== */
+
+/* =====================================
+   MOBILE SIDE MENU
+===================================== */
+
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
   width: 280px;
   height: 100%;
-  background: white;
+  background: #ffffff;
   padding: 30px 20px;
-  transition: 0.3s;
+  transition: 0.3s ease;
   box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+  z-index: 9999;
 }
 
 .mobile-menu.active {
@@ -94,13 +126,14 @@
 .close-btn {
   font-size: 22px;
   cursor: pointer;
-  display: block;
   text-align: right;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .mobile-logo-area {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .mobile-logo-area img {
@@ -123,8 +156,13 @@
   font-size: 16px;
 }
 
-/* ===== RESPONSIVE ===== */
+
+/* =====================================
+   RESPONSIVE HEADER
+===================================== */
+
 @media (max-width: 768px) {
+
   .desktop-header {
     display: none;
   }
@@ -132,160 +170,19 @@
   .mobile-header {
     display: flex;
   }
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* NAVBAR */
-.navbar {
-  background: #0a1f44;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.nav-menu a:hover {
-  color: #00c6ff;
-}
-
-/* PAGE HEADER */
-.page-header {
-  background: linear-gradient(to right, #0a1f44, #123a7c);
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.page-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.page-header p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-/* ABOUT SECTION */
-.about-section {
-  padding: 60px 20px;
-}
-
-.about-container {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.about-container p {
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.about-intro {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.about-highlight {
-  background: #e9f3ff;
-  padding: 20px;
-  border-left: 4px solid #0a1f44;
-  border-radius: 5px;
-}
-
-/* FOOTER */
-.footer {
-  background: #0a1f44;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-  background: #1ebd5a;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-  .nav-menu {
-    display: none;
-  }
-
-  .page-header h1 {
-    font-size: 26px;
-  }
-
-  .about-container {
-    padding: 20px;
-  }
 
 }
 
-/* =========================
-   SERVICES PAGE DESIGN
-========================= */
+
+/* =====================================
+   PAGE HEADER
+===================================== */
 
 .page-header {
   text-align: center;
   padding: 60px 20px;
   background: linear-gradient(135deg, #003366, #0055a5);
-  color: white;
+  color: #ffffff;
 }
 
 .page-header h1 {
@@ -298,93 +195,254 @@ body {
   opacity: 0.9;
 }
 
-/* Services Section */
-.services-page {
-  padding: 60px 20px;
-  background: #f5f7fa;
+
+/* =====================================
+   HERO SLIDER
+===================================== */
+
+.hero-slider {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
 }
 
-.services-wrapper {
+.slides {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+//* =====================================
+   HERO TEXT (PROPER CENTER – NO BOX)
+===================================== */
+
+.hero-slider {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;                  /* Full cover */
+  display: flex;             /* Flex center */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* TEXT STYLE */
+.hero-overlay h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: 700;
+
+  /* Light shadow for readability */
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  margin-bottom: 25px;
+
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+
+/* =====================================
+   PRIMARY BUTTON
+===================================== */
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2bb0ed;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1993cc;
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   SERVICES SECTION (HOME)
+===================================== */
+
+.services-preview {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f9fb;
+}
+
+.services-preview h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.services-preview .subtext {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
   max-width: 1100px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
 }
 
-.service-item {
-  background: white;
-  padding: 30px;
+.service-card {
+  background: #ffffff;
+  padding: 35px 20px;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-size: 18px;
+  font-weight: 600;
   transition: 0.3s ease;
-  text-align: left;
 }
 
-.service-item h3 {
-  margin-bottom: 15px;
-  color: #003366;
-}
-
-.service-item p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Hover Effect */
-.service-item:hover {
+.service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* CTA Section */
+
+/* =====================================
+   CTA SECTION
+===================================== */
+
 .cta {
+  background: #0c2d57;
+  color: #ffffff;
   text-align: center;
-  padding: 60px 20px;
-  background: #003366;
-  color: white;
+  padding: 70px 20px;
 }
 
 .cta h2 {
-  margin-bottom: 20px;
   font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .btn-secondary {
   display: inline-block;
-  padding: 12px 25px;
-  background: #00aaff;
-  color: white;
-  text-decoration: none;
+  padding: 12px 28px;
+  background: #ffffff;
+  color: #0c2d57;
   border-radius: 6px;
-  transition: 0.3s;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: #008ecc;
+  background: #e5e7eb;
 }
 
-/* WhatsApp Button */
+
+/* =====================================
+   HOME CONTACT SECTION
+===================================== */
+
+.home-contact {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.home-contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.home-contact-info {
+  flex: 1;
+}
+
+.home-contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.home-contact-info p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.home-contact-map {
+  flex: 1;
+}
+
+.home-contact-map iframe {
+  width: 100%;
+  height: 320px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* =====================================
+   WHATSAPP FLOAT BUTTON
+===================================== */
+
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 12px 18px;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: #ffffff;
+  padding: 14px 18px;
   border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 2000;
+  transition: 0.3s ease;
 }
 
 .whatsapp-float:hover {
   background: #1ebc59;
+  transform: translateY(-3px);
 }
 
-/* CONTACT WRAPPER */
+
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
 .contact-wrapper {
   max-width: 1200px;
   margin: 80px auto;
@@ -394,7 +452,9 @@ body {
   gap: 50px;
 }
 
-/* LEFT SIDE */
+
+/* ===== LEFT INFO ===== */
+
 .contact-info h2 {
   margin-bottom: 20px;
   font-size: 28px;
@@ -424,11 +484,13 @@ body {
   text-decoration: underline;
 }
 
-/* MAP */
+
+/* ===== MAP ===== */
+
 .map-box {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .map-box iframe {
@@ -437,7 +499,9 @@ body {
   border: none;
 }
 
-/* RIGHT FORM */
+
+/* ===== CONTACT FORM ===== */
+
 .contact-form-box {
   background: #ffffff;
   padding: 35px;
@@ -477,7 +541,7 @@ body {
   border: none;
   border-radius: 8px;
   background: #2bb0ed;
-  color: white;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -488,46 +552,49 @@ body {
   background: #1993cc;
 }
 
-/* MOBILE RESPONSIVE */
-@media(max-width: 900px) {
+
+/* =====================================
+   RESPONSIVE FIXES
+===================================== */
+
+@media (max-width: 992px) {
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-contact-container {
+    flex-direction: column;
+  }
+
   .contact-wrapper {
     grid-template-columns: 1fr;
   }
+
 }
 
-/* DROPDOWN */
+@media (max-width: 768px) {
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-slider {
+    height: 70vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 26px;
+  }
+
+}
+/* =====================================
+   DESKTOP DROPDOWN
+===================================== */
+
 .nav-links li {
   position: relative;
 }
-
-.dropdown-menu {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background: white;
-  list-style: none;
-  padding: 10px 0;
-  display: none;
-  min-width: 220px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-radius: 6px;
-}
-
-.dropdown-menu li {
-  padding: 8px 20px;
-}
-
-.dropdown-menu li a {
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.dropdown-menu li a:hover {
-  color: #0077b6;
-}
-
-/* ===== DESKTOP DROPDOWN ===== */
 
 .dropdown {
   position: relative;
@@ -541,20 +608,14 @@ body {
   position: absolute;
   top: 45px;
   left: 0;
-  background: white;
+  background: #ffffff;
   list-style: none;
-  padding: 10px 0;
   min-width: 220px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 10px 0;
   border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   display: none;
-  z-index: 1000;
-}
-
-/* SHOW when active OR hover */
-.dropdown.active .dropdown-menu,
-.dropdown:hover .dropdown-menu {
-  display: block;
+  z-index: 2000;
 }
 
 .dropdown-menu li {
@@ -569,11 +630,19 @@ body {
 }
 
 .dropdown-menu li a:hover {
-  color: #0077b6;
   background: #f5f7fa;
+  color: #0077b6;
 }
 
-/* ===== MOBILE DROPDOWN ===== */
+.dropdown.active .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* =====================================
+   MOBILE DROPDOWN
+===================================== */
 
 .mobile-dropdown {
   position: relative;
@@ -606,14 +675,13 @@ body {
 }
 
 
-/* =========================================
-   SERVICE DETAIL PAGES (COMMON DESIGN)
-========================================= */
+/* =====================================
+   SERVICE DETAIL PAGES
+===================================== */
 
-/* HERO SECTION */
 .service-hero {
   background: linear-gradient(135deg, #003366, #0055a5);
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 80px 20px;
 }
@@ -629,7 +697,6 @@ body {
   opacity: 0.95;
 }
 
-/* MAIN CONTENT SECTION */
 .service-detail {
   max-width: 1100px;
   margin: 70px auto;
@@ -638,7 +705,6 @@ body {
   gap: 35px;
 }
 
-/* CONTENT BOX */
 .service-box {
   background: #ffffff;
   padding: 35px;
@@ -674,492 +740,590 @@ body {
   color: #444;
 }
 
-/* CTA SECTION */
 .service-cta {
   text-align: center;
   margin-top: 20px;
 }
 
-.btn-primary {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #2bb0ed;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 16px;
+
+/* =====================================
+   APPLICATION PAGE
+===================================== */
+
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Step Indicator */
+
+.step-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 40px;
+}
+
+.step-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #243b64;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
+}
+
+.step-line {
+  width: 200px;
+  height: 4px;
+  background: #243b64;
+}
+
+.tab-label {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Form Styling */
+
+.section-title {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #243b64;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 18px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cfd6e4;
+  border-radius: 6px;
+  margin-top: 6px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0c2d57;
+  box-shadow: 0 0 0 2px rgba(12,45,87,0.1);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.required {
+  color: red;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* Table Grid */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.grid-table {
+  min-width: 900px;
+  display: grid;
+  grid-template-columns: 60px 1.5fr 1.5fr 150px 150px 150px;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Consent Box */
+
+.consent-box {
+  background: #f8f9fc;
+  border: 1px solid #d9e1f2;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.notice-box {
+  background: #fff4e5;
+  border: 1px solid #ffc107;
+  padding: 18px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+/* Buttons */
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 30px;
+  background: #243b64;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
-.btn-primary:hover {
-  background: #1993cc;
-  transform: translateY(-2px);
+button:hover {
+  background: #1a2d4d;
 }
 
-/* MOBILE RESPONSIVE */
-@media(max-width: 768px) {
 
-  .service-hero {
-    padding: 60px 20px;
-  }
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
 
   .service-hero h1 {
     font-size: 28px;
   }
 
-  .service-box {
+  .container {
+    margin: 40px 15px;
     padding: 25px;
   }
 
+  .grid-table {
+    min-width: 800px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
 
+/* =====================================
+   HEADER Z-INDEX FIX
+===================================== */
 
-/* ============================= */
-/* HERO SLIDER SECTION */
-/* ============================= */
+.desktop-header,
+.mobile-header {
+  position: relative;
+  z-index: 3000;
+}
 
+/* Ensure mobile menu always above content */
+.mobile-menu {
+  z-index: 4000;
+}
+
+/* Hero slider should stay below header */
 .hero-slider {
-  position: relative;
-  height: 85vh;
-  overflow: hidden;
+  z-index: 1;
 }
 
-.slides {
-  position: relative;
-  height: 100%;
+/* =====================================
+   REMOVE BLACK HERO BOX
+   (Clean Image + Soft Gradient)
+===================================== */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(10, 37, 64, 0.45),
+      rgba(10, 37, 64, 0.45)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
 }
+
+.hero-overlay h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* =====================================
+   HERO AUTO IMAGE TRANSITION SMOOTH
+===================================== */
 
 .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  transition: opacity 1.2s ease-in-out;
 }
 
 .slide.active {
   opacity: 1;
 }
 
-/* HERO OVERLAY */
+/* =====================================
+   FIX HAMBURGER OVER IMAGE
+===================================== */
 
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.55);
-  padding: 40px;
-  text-align: center;
-  color: white;
-  border-radius: 8px;
-  max-width: 600px;
-  width: 90%;
+.mobile-header {
+  position: relative;
+  z-index: 5000;
+  background: #ffffff;
 }
 
-.hero-overlay h1 {
-  font-size: 38px;
-  margin-bottom: 15px;
+/* Optional: slight shadow for clarity */
+.mobile-header {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.hero-overlay p {
-  font-size: 18px;
+/* =====================================
+   ENSURE NAVBAR ALWAYS ON TOP
+===================================== */
+
+.navbar {
+  position: relative;
+  z-index: 4500;
+}
+
+/* =====================================
+   MOBILE MENU ANIMATION IMPROVED
+===================================== */
+
+.mobile-menu {
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 0;
+}
+
+/* =====================================
+   PREVENT SCROLL WHEN MENU OPEN
+===================================== */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* =====================================
+   CONTACT PAGE SMALL IMPROVEMENT
+===================================== */
+
+@media (max-width: 600px) {
+
+  .contact-wrapper {
+    margin: 40px 15px;
+  }
+
+  .contact-form-box {
+    padding: 25px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+}
+
+/* =====================================
+   APPLICATION PAGE MOBILE POLISH
+===================================== */
+
+@media (max-width: 600px) {
+
+  .step-wrapper {
+    flex-direction: row;
+  }
+
+  .step-line {
+    width: 80px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+}
+
+/* =====================================
+   SAFETY: REMOVE DUPLICATE BODY STYLE
+===================================== */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================================
+   FINAL CLEAN BUTTON LOOK
+===================================== */
+
+button,
+.btn-primary,
+.btn-secondary {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   ABOUT PAGE SECTION
+===================================== */
+
+.about-section {
+  padding: 80px 20px;
+  background: #f4f7fb;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Main Paragraphs */
+.about-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
   margin-bottom: 20px;
 }
 
-.btn-primary {
-  background: #00bcd4;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 5px;
-  display: inline-block;
-  transition: 0.3s;
+/* Mission & Vision Headings */
+.about-container h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #0a2540;
 }
 
-.btn-primary:hover {
-  background: #0097a7;
+/* Highlight Box */
+.about-highlight {
+  background: #e8f2ff;
+  padding: 20px;
+  border-left: 4px solid #2bb0ed;
+  border-radius: 8px;
+  margin-top: 15px;
 }
 
 
-/* ============================= */
-/* SERVICES SECTION */
-/* ============================= */
+/* =====================================
+   PAGE HEADER (ABOUT TOP BLUE SECTION)
+===================================== */
 
-.services-preview {
-  padding: 80px 20px;
+.page-header {
   text-align: center;
-  background: #f8f9fb;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #003366, #0055a5);
+  color: #ffffff;
 }
 
-.services-preview h2 {
-  font-size: 32px;
+.page-header h1 {
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
-.services-preview .subtext {
-  color: #666;
-  margin-bottom: 50px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.service-card {
-  background: white;
-  padding: 35px 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+.page-header p {
   font-size: 18px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  opacity: 0.9;
 }
 
 
-/* ============================= */
-/* CTA SECTION */
-/* ============================= */
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
 
-.cta {
-  background: #0c2d57;
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
+@media (max-width: 768px) {
+
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .about-container p {
+    font-size: 15px;
+  }
 }
 
-.cta h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+.footer {
+  background: #0a2540;
+  color: #ffffff;
+  padding: 60px 20px 20px;
+  margin-top: 60px;
 }
 
-.btn-secondary {
-  background: white;
-  color: #0c2d57;
-  padding: 12px 28px;
-  border-radius: 5px;
-  font-weight: 600;
-  display: inline-block;
-}
-
-
-/* ============================= */
-/* CONTACT SECTION */
-/* ============================= */
-
-.home-contact {
-  padding: 80px 20px;
-  background: #fff;
-}
-
-.home-contact-container {
-  display: flex;
-  gap: 50px;
+.footer-container {
   max-width: 1100px;
   margin: auto;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
 }
 
-.home-contact-info {
-  flex: 1;
-}
-
-.home-contact-info h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.home-contact-info p {
+.footer-section h3,
+.footer-section h4 {
   margin-bottom: 15px;
-  font-size: 16px;
 }
 
-.home-contact-map {
-  flex: 1;
+.footer-section p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #d1d5db;
 }
 
-.home-contact-map iframe {
-  width: 100%;
-  height: 320px;
-  border: none;
-  border-radius: 10px;
+.footer-links {
+  list-style: none;
+  padding: 0;
 }
 
+.footer-links li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
 
-/* ============================= */
-/* WHATSAPP FLOAT BUTTON */
-/* ============================= */
+.footer-links a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: 0.3s;
+}
 
+.footer-links a:hover {
+  color: #2bb0ed;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* WhatsApp Button */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  color: white;
-  padding: 12px 18px;
+  color: #ffffff;
+  padding: 14px 20px;
   border-radius: 50px;
-  font-size: 14px;
+  text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
 
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media (max-width: 992px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-contact-container {
-    flex-direction: column;
-  }
+.whatsapp-float:hover {
+  background: #1ebc59;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-
-  .hero-overlay h1 {
-    font-size: 26px;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-slider {
-    height: 70vh;
+  .footer {
+    text-align: center;
   }
 }
 
-/* ========================================= */
-/* APPLICATION PAGE STYLING */
-/* ========================================= */
+/* ===============================
+   MOBILE MENU FIX
+=================================*/
 
-/* Page Background */
-body{
-    background:#eef1f6;
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #ffffff;
+  padding: 60px 25px 30px 25px;
+  transition: right 0.3s ease;
+  box-shadow: -6px 0 25px rgba(0,0,0,0.15);
+  z-index: 9999;
+  overflow-y: auto;
 }
 
-/* Main Container */
-.container{
-    max-width:1100px;
-    margin:50px auto;
-    background:#ffffff;
-    padding:35px;
-    border-radius:12px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.08);
+.mobile-menu.active {
+  right: 0;
 }
 
-/* Main Heading */
-h1{
-    text-align:center;
-    font-size:36px;
-    margin-bottom:15px;
-    color:#0c2d57;
+/* Close Button FIX */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  z-index: 10000;
 }
 
-/* Step Indicator */
-.step-wrapper{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:30px 0 40px;
+.close-btn:hover {
+  color: #0077b6;
 }
 
-.step-circle{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:#243b64;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:600;
+/* Prevent hero image overlap */
+header {
+  position: relative;
+  z-index: 10000;
 }
 
-.step-line{
-    width:200px;
-    height:4px;
-    background:#243b64;
+/* Ensure hero slider stays behind */
+.hero-slider {
+  position: relative;
+  z-index: 1;
 }
 
-.tab-label{
-    text-align:center;
-    font-size:18px;
-    margin-bottom:30px;
-    color:#666;
+/* Scroll inside menu */
+.mobile-menu::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Section Titles */
-.section-title{
-    font-size:22px;
-    margin-top:40px;
-    margin-bottom:15px;
-    color:#243b64;
-}
-
-/* Labels */
-label{
-    font-weight:600;
-    display:block;
-    margin-top:18px;
-}
-
-/* Inputs */
-input, select, textarea{
-    width:100%;
-    padding:9px;
-    border:1px solid #cfd6e4;
-    border-radius:6px;
-    margin-top:6px;
-    font-size:14px;
-    transition:0.2s ease;
-}
-
-input:focus, select:focus, textarea:focus{
-    outline:none;
-    border-color:#0c2d57;
-    box-shadow:0 0 0 2px rgba(12,45,87,0.1);
-}
-
-textarea{
-    resize:vertical;
-}
-
-/* Required Star */
-.required{
-    color:red;
-}
-
-/* Notes */
-.note{
-    margin-top:10px;
-    font-size:13px;
-    color:#555;
-}
-
-/* Table Grid */
-.table-wrapper{
-    width:100%;
-    overflow-x:auto;
-    margin-bottom:20px;
-}
-
-.grid-table{
-    min-width:900px;
-    display:grid;
-    grid-template-columns: 60px 1.5fr 1.5fr 150px 150px 150px;
-    gap:15px;
-    align-items:center;
-}
-
-/* Radio Group */
-.radio-group{
-    display:flex;
-    gap:30px;
-    margin:10px 0 20px;
-}
-
-/* Consent Boxes */
-.consent-box{
-    background:#f8f9fc;
-    border:1px solid #d9e1f2;
-    padding:20px;
-    border-radius:8px;
-    font-size:14px;
-    line-height:1.6;
-    margin:20px 0;
-}
-
-.notice-box{
-    background:#fff4e5;
-    border:1px solid #ffc107;
-    padding:18px;
-    border-radius:8px;
-    margin:20px 0;
-    font-size:14px;
-}
-
-/* Review Page */
-.review-box{
-    background:#f8f9fb;
-    padding:20px;
-    border-radius:8px;
-    border:1px solid #e0e5ef;
-    overflow-x:auto;
-}
-
-/* Buttons */
-button{
-    padding:12px 30px;
-    background:#243b64;
-    color:white;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-    margin-top:25px;
-    transition:0.3s ease;
-}
-
-button:hover{
-    background:#1a2d4d;
-}
-
-.button-group{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-/* Horizontal Rule */
-hr{
-    margin:30px 0;
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-    .container{
-        margin:40px 15px;
-        padding:25px;
-    }
-
-    h1{
-        font-size:26px;
-    }
-
-    .section-title{
-        font-size:18px;
-    }
-
-    .step-line{
-        width:100px;
-    }
-
-    .grid-table{
-        min-width:800px;
-    }
-
-    button{
-        width:100%;
-    }
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }

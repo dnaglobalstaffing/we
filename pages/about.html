@@ -60,23 +60,27 @@ fetch('../components/header.html')
       strive to improve service quality and build long-term relationships based on trust.
     </p>
 
-    <p class="about-highlight">
-      <strong>Our Mission:</strong><br>
-      To provide reliable, trained, and compassionate professionals that help families
-      feel secure, supported, and confident.
-    </p>
+    <div class="about-highlight">
+      <h3>Our Mission</h3>
+      <p>
+        To provide reliable, trained, and compassionate professionals that help families
+        feel secure, supported, and confident.
+      </p>
+    </div>
 
-    <p class="about-highlight">
-      <strong>Our Vision:</strong><br>
-      To become a trusted name in home staffing services by consistently delivering quality,
-      transparency, and care.
-    </p>
+    <div class="about-highlight">
+      <h3>Our Vision</h3>
+      <p>
+        To become a trusted name in home staffing services by consistently delivering quality,
+        transparency, and care.
+      </p>
+    </div>
 
   </div>
 </section>
 
 
-<!-- FLOATING WHATSAPP BUTTON -->
+<!-- WHATSAPP BUTTON -->
 <a
   href="https://wa.me/447438821200"
   class="whatsapp-float"
@@ -86,6 +90,16 @@ fetch('../components/header.html')
 </a>
 
 
+<!-- FOOTER LOAD -->
+<div id="footer"></div>
+
+<script>
+fetch('../components/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
 
 </body>
 </html>
