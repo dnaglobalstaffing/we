@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 25px 30px;
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   position: relative;
@@ -80,7 +80,7 @@ body {
   display: none;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 25px 20px;
   background: #ffffff;
   position: relative;
   z-index: 1100;
@@ -202,7 +202,7 @@ body {
 
 .hero-slider {
   position: relative;
-  height: 85vh;
+  height: 95vh;
   overflow: hidden;
 }
 
@@ -223,6 +223,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
 }
 
 .slide.active {
@@ -236,7 +237,7 @@ body {
 
 .hero-slider {
   position: relative;
-  height: 85vh;
+  height: 95vh;
   overflow: hidden;
 }
 
@@ -1422,7 +1423,7 @@ header {
 /* Give space to body so content not hide under header */
 
 body {
-  padding-top: 90px;  /* adjust if header height changes */
+  padding-top: 60px;  /* adjust if header height changes */
 }
 
 header {
